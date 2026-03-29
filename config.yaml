@@ -1,0 +1,98 @@
+model_list:
+  # --- Zhipu (GLM) Models ---
+  - model_name: glm-5.1
+    litellm_params:
+      model: custom_openai/glm-5.1
+      api_base: "https://aiproxy.xin/cosphere/v1"
+      api_key: os.environ/PROXY_API_KEY
+      headers:
+        "User-Agent": "OpenInterpreter/0.4.2"
+
+  - model_name: glm-5
+    litellm_params:
+      model: custom_openai/glm-5
+      api_base: "https://aiproxy.xin/cosphere/v1"
+      api_key: os.environ/PROXY_API_KEY
+      headers:
+        "User-Agent": "OpenInterpreter/0.4.2"
+
+  - model_name: GLM-5-Turbo
+    litellm_params:
+      model: custom_openai/GLM-5-Turbo
+      api_base: "https://aiproxy.xin/cosphere/v1"
+      api_key: os.environ/PROXY_API_KEY
+      headers:
+        "User-Agent": "OpenInterpreter/0.4.2"
+
+  # --- MiniMax Models ---
+  - model_name: MiniMax-M2.7
+    litellm_params:
+      model: custom_openai/MiniMax-M2.7
+      api_base: "https://aiproxy.xin/cosphere/v1"
+      api_key: os.environ/PROXY_API_KEY
+      headers:
+        "User-Agent": "OpenInterpreter/0.4.2"
+
+  - model_name: MiniMax-M2.7-highspeed
+    litellm_params:
+      model: custom_openai/MiniMax-M2.7-highspeed
+      api_base: "https://aiproxy.xin/cosphere/v1"
+      api_key: os.environ/PROXY_API_KEY
+      headers:
+        "User-Agent": "OpenInterpreter/0.4.2"
+
+  - model_name: MiniMax-M2.5
+    litellm_params:
+      model: custom_openai/MiniMax-M2.5
+      api_base: "https://aiproxy.xin/cosphere/v1"
+      api_key: os.environ/PROXY_API_KEY
+      headers:
+        "User-Agent": "OpenInterpreter/0.4.2"
+
+  - model_name: MiniMax-M2.5-highspeed
+    litellm_params:
+      model: custom_openai/MiniMax-M2.5-highspeed
+      api_base: "https://aiproxy.xin/cosphere/v1"
+      api_key: os.environ/PROXY_API_KEY
+      headers:
+        "User-Agent": "OpenInterpreter/0.4.2"
+
+  - model_name: MiniMax-M2.1
+    litellm_params:
+      model: custom_openai/MiniMax-M2.1
+      api_base: "https://aiproxy.xin/cosphere/v1"
+      api_key: os.environ/PROXY_API_KEY
+      headers:
+        "User-Agent": "OpenInterpreter/0.4.2"
+
+  # --- Kimi Models ---
+  - model_name: kimi-k2.5
+    litellm_params:
+      model: custom_openai/kimi-k2.5
+      api_base: "https://aiproxy.xin/cosphere/v1"
+      api_key: os.environ/PROXY_API_KEY
+      headers:
+        "User-Agent": "OpenInterpreter/0.4.2"
+
+  # --- DeepSeek Models ---
+  - model_name: DeepSeek-V3.2
+    litellm_params:
+      model: custom_openai/DeepSeek-V3.2
+      api_base: "https://aiproxy.xin/cosphere/v1"
+      api_key: os.environ/PROXY_API_KEY
+      headers:
+        "User-Agent": "OpenInterpreter/0.4.2"
+
+  # --- Testing ---
+  - model_name: test-webhook
+    litellm_params:
+      model: custom_openai/test-webhook
+      api_base: "https://webhook.site/6c777801-70ad-4c1f-b26a-7291842f201d"
+      api_key: "sk-test-webhook-key"
+      headers:
+        "User-Agent": "OpenInterpreter/0.4.2"
+
+general_settings:
+  master_key: "os.environ/LITELLM_MASTER_KEY"
+  database_url: "postgresql://llmproxy:dbpassword9090@db:5432/litellm"
+  forward_client_headers_to_llm_api: false
