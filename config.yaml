@@ -7,6 +7,9 @@ model_list:
       api_key: os.environ/PROXY_API_KEY
       headers:
         "User-Agent": "OpenInterpreter/0.4.2"
+    model_info:
+      input_cost_per_token: 0.000001
+      output_cost_per_token: 0.0000032
 
   - model_name: glm-5
     litellm_params:
@@ -15,6 +18,9 @@ model_list:
       api_key: os.environ/PROXY_API_KEY
       headers:
         "User-Agent": "OpenInterpreter/0.4.2"
+    model_info:
+      input_cost_per_token: 0.000001
+      output_cost_per_token: 0.0000032
 
   - model_name: GLM-5-Turbo
     litellm_params:
@@ -23,6 +29,9 @@ model_list:
       api_key: os.environ/PROXY_API_KEY
       headers:
         "User-Agent": "OpenInterpreter/0.4.2"
+    model_info:
+      input_cost_per_token: 0.0000012
+      output_cost_per_token: 0.000004
 
   # --- MiniMax Models ---
   - model_name: MiniMax-M2.7
@@ -32,6 +41,9 @@ model_list:
       api_key: os.environ/PROXY_API_KEY
       headers:
         "User-Agent": "OpenInterpreter/0.4.2"
+    model_info:
+      input_cost_per_token: 0.0000003
+      output_cost_per_token: 0.0000012
 
   - model_name: MiniMax-M2.7-highspeed
     litellm_params:
@@ -40,6 +52,9 @@ model_list:
       api_key: os.environ/PROXY_API_KEY
       headers:
         "User-Agent": "OpenInterpreter/0.4.2"
+    model_info:
+      input_cost_per_token: 0.0000006
+      output_cost_per_token: 0.0000024
 
   - model_name: MiniMax-M2.5
     litellm_params:
@@ -48,6 +63,9 @@ model_list:
       api_key: os.environ/PROXY_API_KEY
       headers:
         "User-Agent": "OpenInterpreter/0.4.2"
+    model_info:
+      input_cost_per_token: 0.0000003
+      output_cost_per_token: 0.0000012
 
   - model_name: MiniMax-M2.5-highspeed
     litellm_params:
@@ -56,6 +74,9 @@ model_list:
       api_key: os.environ/PROXY_API_KEY
       headers:
         "User-Agent": "OpenInterpreter/0.4.2"
+    model_info:
+      input_cost_per_token: 0.0000006
+      output_cost_per_token: 0.0000024
 
   - model_name: MiniMax-M2.1
     litellm_params:
@@ -64,6 +85,9 @@ model_list:
       api_key: os.environ/PROXY_API_KEY
       headers:
         "User-Agent": "OpenInterpreter/0.4.2"
+    model_info:
+      input_cost_per_token: 0.0000003
+      output_cost_per_token: 0.0000012
 
   # --- Kimi Models ---
   - model_name: kimi-k2.5
@@ -73,6 +97,9 @@ model_list:
       api_key: os.environ/PROXY_API_KEY
       headers:
         "User-Agent": "OpenInterpreter/0.4.2"
+    model_info:
+      input_cost_per_token: 0.000000571428571
+      output_cost_per_token: 0.000002285714286
 
   # --- DeepSeek Models ---
   - model_name: DeepSeek-V3.2
@@ -82,6 +109,9 @@ model_list:
       api_key: os.environ/PROXY_API_KEY
       headers:
         "User-Agent": "OpenInterpreter/0.4.2"
+    model_info:
+      input_cost_per_token: 0.00000027
+      output_cost_per_token: 0.0000011
 
   # --- Testing ---
   - model_name: test-webhook
