@@ -10,6 +10,7 @@ model_list:
     model_info:
       input_cost_per_token: 0.000001
       output_cost_per_token: 0.0000032
+      cache_read_input_token_cost: 0.0000002
 
   - model_name: glm-5
     litellm_params:
@@ -21,6 +22,7 @@ model_list:
     model_info:
       input_cost_per_token: 0.000001
       output_cost_per_token: 0.0000032
+      cache_read_input_token_cost: 0.0000002
 
   - model_name: GLM-5-Turbo
     litellm_params:
@@ -32,6 +34,7 @@ model_list:
     model_info:
       input_cost_per_token: 0.0000012
       output_cost_per_token: 0.000004
+      cache_read_input_token_cost: 0.00000024
 
   # --- MiniMax Models ---
   - model_name: MiniMax-M2.7
@@ -44,6 +47,8 @@ model_list:
     model_info:
       input_cost_per_token: 0.0000003
       output_cost_per_token: 0.0000012
+      cache_read_input_token_cost: 0.00000006
+      cache_creation_input_token_cost: 0.000000375
 
   - model_name: MiniMax-M2.7-highspeed
     litellm_params:
@@ -55,6 +60,8 @@ model_list:
     model_info:
       input_cost_per_token: 0.0000006
       output_cost_per_token: 0.0000024
+      cache_read_input_token_cost: 0.00000006
+      cache_creation_input_token_cost: 0.000000375
 
   - model_name: MiniMax-M2.5
     litellm_params:
@@ -66,6 +73,8 @@ model_list:
     model_info:
       input_cost_per_token: 0.0000003
       output_cost_per_token: 0.0000012
+      cache_read_input_token_cost: 0.00000003
+      cache_creation_input_token_cost: 0.000000375
 
   - model_name: MiniMax-M2.5-highspeed
     litellm_params:
@@ -77,6 +86,8 @@ model_list:
     model_info:
       input_cost_per_token: 0.0000006
       output_cost_per_token: 0.0000024
+      cache_read_input_token_cost: 0.00000003
+      cache_creation_input_token_cost: 0.000000375
 
   - model_name: MiniMax-M2.1
     litellm_params:
@@ -88,6 +99,8 @@ model_list:
     model_info:
       input_cost_per_token: 0.0000003
       output_cost_per_token: 0.0000012
+      cache_read_input_token_cost: 0.00000003
+      cache_creation_input_token_cost: 0.000000375
 
   # --- Kimi Models ---
   - model_name: kimi-k2.5
@@ -98,8 +111,9 @@ model_list:
       headers:
         "User-Agent": "OpenInterpreter/0.4.2"
     model_info:
-      input_cost_per_token: 0.000000571428571
-      output_cost_per_token: 0.000002285714286
+      input_cost_per_token: 0.0000006
+      output_cost_per_token: 0.000003
+      cache_read_input_token_cost: 0.0000001
 
   # --- DeepSeek Models ---
   - model_name: DeepSeek-V3.2
@@ -112,6 +126,7 @@ model_list:
     model_info:
       input_cost_per_token: 0.00000027
       output_cost_per_token: 0.0000011
+      cache_read_input_token_cost: 0.00000007
 
   # --- Testing ---
   - model_name: test-webhook
