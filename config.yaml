@@ -143,7 +143,7 @@ general_settings:
   database_url: "postgresql://llmproxy:dbpassword9090@db:5432/litellm"
   forward_client_headers_to_llm_api: false
   always_include_stream_usage: true
-  alert: ['slack']
+  alerting: ["slack"]
   spend_report_frequency: "1d"
 
 litellm_settings:
