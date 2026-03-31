@@ -143,7 +143,14 @@ general_settings:
   database_url: "postgresql://llmproxy:dbpassword9090@db:5432/litellm"
   forward_client_headers_to_llm_api: false
   always_include_stream_usage: true
+  alert: ['slack']
+  spend_report_frequency: "1d"
 
 litellm_settings:
   callbacks:
     - prometheus
+  timezone: "Asia/Seoul"
+
+environment_variables:
+  SLACK_WEBHOOK_URL: https://discord.com/api/webhooks/1488506691640234134/Z-v74BxZpyPOERG0SsOuT76qUxRPcuxHSk3MN1QCOCyd_koVKoZZ2rKuEl8ky0JJiqpb/slack
+  LITELLM_LOG: INFO
