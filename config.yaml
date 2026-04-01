@@ -145,12 +145,26 @@ general_settings:
   always_include_stream_usage: true
   alerting: ["slack"]
   spend_report_frequency: "1d"
+  database_connection_pool_limit: 20
+  alert_type_config:
+    llm_exceptions:
+      digest: false
+    llm_requests_hanging:
+      digest: false
+    llm_too_slow:
+      digest: false
+    new_model_added:
+      digest: false
+    fallback_reports:
+      digest: false
+
 
 litellm_settings:
   callbacks:
     - prometheus
-  timezone: "Asia/Seoul"
+  timezone: "Asia/Tokyo"
 
 environment_variables:
   SLACK_WEBHOOK_URL: https://discord.com/api/webhooks/1488506691640234134/Z-v74BxZpyPOERG0SsOuT76qUxRPcuxHSk3MN1QCOCyd_koVKoZZ2rKuEl8ky0JJiqpb/slack
-  LITELLM_LOG: INFO
+  LITELLM_LOG: "ERROR"
+  LITELLM_MODE: "PRODUCTION"
