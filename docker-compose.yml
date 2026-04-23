@@ -8,6 +8,7 @@ services:
       - "4000:4000"
     volumes:
       - ./config.yaml:/app/config.yaml
+      - ./auth_data:/app/auth_data
     environment:
       - LITELLM_MASTER_KEY=${LITELLM_MASTER_KEY}
       - LITELLM_SALT_KEY=${LITELLM_SALT_KEY}
@@ -17,6 +18,8 @@ services:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - LITELLM_LOG=ERROR
       - LITELLM_MODE=PRODUCTION
+      - CHATGPT_TOKEN_DIR=/app/auth_data
+      - CHATGPT_AUTH_FILE=chatgpt_session.json
     command:
       - "--config=/app/config.yaml"
       - "--detailed_debug"
