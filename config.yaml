@@ -150,6 +150,11 @@ model_list:
       headers:
         "User-Agent": "OpenInterpreter/0.4.2"
   # --- Codex Models ---
+  - model_name: chatgpt/gpt-5.5
+    model_info:
+      mode: responses
+    litellm_params:
+      model: chatgpt/gpt-5.5
   - model_name: chatgpt/gpt-5.4
     model_info:
       mode: responses
@@ -206,6 +211,7 @@ litellm_settings:
   callbacks:
     - prometheus
   timezone: "Asia/Tokyo"
+  drop_params: true
 
 environment_variables:
   SLACK_WEBHOOK_URL: https://discord.com/api/webhooks/1488506691640234134/Z-v74BxZpyPOERG0SsOuT76qUxRPcuxHSk3MN1QCOCyd_koVKoZZ2rKuEl8ky0JJiqpb/slack
